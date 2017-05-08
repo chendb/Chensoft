@@ -1,0 +1,19 @@
+{
+  "Name": "Plugin Test",
+  "Manifest": {
+    "Assemblies": [
+      "Chensoft.Plugins.Module.TestA.dll",
+      "Chensoft.Plugins.Module.TestB.dll"
+    ],
+    "Author": "Chensoft",
+    "Copyright": "its",
+    "Title": "test",
+    "Version": "1.0.0.0"
+  },
+  "Builtins": [
+    {
+      "Contract": "WorkerA",
+      "Type": "Chensoft.Plugins.Module.TestA.WorkerA,Chensoft.Plugins.Module.TestA"
+    }
+  ]
+}

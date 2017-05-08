@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFB59389-19D0-4D88-BB7B-4709E4BB3FB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chensoft</RootNamespace>
+    <AssemblyName>Chensoft.CoreLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Mef.CommonServiceLocator, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.MefAdapter.1.0\lib\Microsoft.Mef.CommonServiceLocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=4.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.4.5.8\lib\net45\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.5.8\lib\portable-wp80+sl5+net45+win8+wpa81+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Redis.4.5.8\lib\net45\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.5.8\lib\net45\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\BinaryComparer.cs" />
+    <Compile Include="Collections\Category.cs" />
+    <Compile Include="Collections\CategoryBase.cs" />
+    <Compile Include="Collections\CategoryCollection.cs" />
+    <Compile Include="Collections\Collection.cs" />
+    <Compile Include="Collections\DequeuedEventArgs.cs" />
+    <Compile Include="Collections\DequeuedReason.cs" />
+    <Compile Include="Collections\HierarchicalNode.cs" />
+    <Compile Include="Collections\HierarchicalNodeCollection.cs" />
+    <Compile Include="Collections\IQueue.cs" />
+    <Compile Include="Collections\NamedCollectionBase.cs" />
+    <Compile Include="Collections\Queue.cs" />
+    <Compile Include="Collections\QueueEventArgs.cs" />
+    <Compile Include="Common\Convert.cs" />
+    <Compile Include="Common\IDisposableObject.cs" />
+    <Compile Include="Collections\ObjectPool.cs" />
+    <Compile Include="Common\ISequence.cs" />
+    <Compile Include="Common\SequenceInfo.cs" />
+    <Compile Include="Common\StringExtension.cs" />
+    <Compile Include="Common\TypeExtension.cs" />
+    <Compile Include="Common\UrlUtility.cs" />
+    <Compile Include="Communication\IPEndPointConverter.cs" />
+    <Compile Include="ComponentModel\AliasAttribute.cs" />
+    <Compile Include="ComponentModel\GuidConverter.cs" />
+    <Compile Include="Extensions\PublicExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Externals\Redis\CollectionRemovedEventArgs.cs" />
+    <Compile Include="Externals\Redis\CollectionRemovedReason.cs" />
+    <Compile Include="Externals\Redis\DequeuedEventArgs.cs" />
+    <Compile Include="Externals\Redis\EnqueuedEventArgs.cs" />
+    <Compile Include="Externals\Redis\IRedisDictionary.cs" />
+    <Compile Include="Externals\Redis\IRedisHashset.cs" />
+    <Compile Include="Externals\Redis\IRedisQueue.cs" />
+    <Compile Include="Externals\Redis\IRedisService.cs" />
+    <Compile Include="Externals\Redis\ObjectCache.cs" />
+    <Compile Include="Externals\Redis\RedisChannelEventArgs.cs" />
+    <Compile Include="Externals\Redis\RedisChannelMessageEventArgs.cs" />
+    <Compile Include="Externals\Redis\RedisDictionary.cs" />
+    <Compile Include="Externals\Redis\RedisEntryType.cs" />
+    <Compile Include="Externals\Redis\RedisException.cs" />
+    <Compile Include="Externals\Redis\RedisHashset.cs" />
+    <Compile Include="Externals\Redis\RedisObjectBase.cs" />
+    <Compile Include="Externals\Redis\RedisPoolManager.cs" />
+    <Compile Include="Externals\Redis\RedisQueue.cs" />
+    <Compile Include="Externals\Redis\RedisSequence.cs" />
+    <Compile Include="Externals\Redis\RedisService.cs" />
+    <Compile Include="Externals\Redis\RedisServiceSettings.cs" />
+    <Compile Include="Externals\Redis\RedisSubscriber.cs" />
+    <Compile Include="Externals\Redis\Utility.cs" />
+    <Compile Include="Logging\EventMessage.cs" />
+    <Compile Include="Logging\LoggingEvent.cs" />
+    <Compile Include="Logging\LoggingEventCache.cs" />
+    <Compile Include="Logging\MemoryQueueAppender.cs" />
+    <Compile Include="Plugins\Application.cs" />
+    <Compile Include="Plugins\ApplicationContext.cs" />
+    <Compile Include="Plugins\Builtin.cs" />
+    <Compile Include="ComponentModel\IModule.cs" />
+    <Compile Include="Plugins\IPluginLoader.cs" />
+    <Compile Include="Plugins\Plugin.cs" />
+    <Compile Include="Plugins\PluginFeature.cs" />
+    <Compile Include="Plugins\PluginException.cs" />
+    <Compile Include="Plugins\PluginExportProvider.cs" />
+    <Compile Include="Plugins\PluginLoader.cs" />
+    <Compile Include="Plugins\PluginManifest.cs" />
+    <Compile Include="Plugins\PluginSetup.cs" />
+    <Compile Include="Plugins\PluginUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\ResourceUtility.cs" />
+    <Compile Include="Services\IWorker.cs" />
+    <Compile Include="Services\WorkerBase.cs" />
+    <Compile Include="Services\WorkerState.cs" />
+    <Compile Include="Terminals\ConsoleTerminal.cs" />
+    <Compile Include="Terminals\ITerminal.cs" />
+    <Compile Include="Terminals\TerminalColor.cs" />
+    <Compile Include="Terminals\TerminalStyles.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Plugins\Plugin.plugin" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
